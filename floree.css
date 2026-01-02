@@ -483,6 +483,20 @@ header {
 }
 
 
+/* ===== MOBILE FOOTER FIX ===== */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.footer-links a {
+  white-space: nowrap;     
+  padding: 10px 14px;
+  font-size: 13px;
+}
 
 
 
@@ -646,18 +660,4 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 
-/* ===== MOBILE FOOTER FIX ===== */
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 0 12px;
-}
-
-.footer-links a {
-  white-space: nowrap;     
-  padding: 10px 14px;
-  font-size: 13px;
-}
 
