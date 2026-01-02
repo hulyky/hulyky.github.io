@@ -486,6 +486,166 @@ header {
 
 
 
+
+
+
+
+/* =========================
+   MOBILE CSS 
+   ========================= */
+
+/* Smooth scrolling for anchor links */
+html { scroll-behavior: smooth; }
+
+/* Better sizing + prevent overflow on mobile */
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* -------- TABLET & MOBILE -------- */
+@media (max-width: 768px) {
+
+  /* Global spacing */
+  section { padding: 45px 6%; }
+
+  /* ---------- HEADER ---------- */
+  header {
+    display: flex;
+    flex-direction: column;   /* stack logo + nav */
+    align-items: center;
+    gap: 10px;
+    padding: 12px 6%;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  
+  .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  nav { width: 100%; }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  nav a { font-size: 15px; }
+
+  
+  .cart-icon {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    margin-left: 0;
+  }
+
+  .cart-icon img { width: 20px; height: auto; }
+
+ 
+  .logo-overlay { display: none; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 6%;
+    gap: 20px;
+  }
+
+  .hero-text { max-width: 100%; }
+
+  .hero-text h1 { font-size: 38px; }
+
+  .hero-text p { font-size: 16px; }
+
+  .hero-img {
+    width: 75%;
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  /* ---------- SHOP / GRID ---------- */
+  .bouquet-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .card { padding: 16px; }
+
+  .arrow-link { width: 42px; height: 42px; }
+
+  /* ---------- ABOUT + NEWSLETTER ---------- */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .newsletter {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input,
+  .newsletter-form button { width: 100%; }
+
+  /* ---------- CONTACT FORM ---------- */
+  .contact-form {
+    max-width: 100%;
+    margin: 20px auto 0;
+    padding: 20px;
+  }
+
+  /* ---------- MAP ---------- */
+  .map-wrap iframe { height: 320px; }
+}
+
+/* -------- SMALL PHONES -------- */
+@media (max-width: 480px) {
+
+  section { padding: 40px 5%; }
+
+  .hero-text h1 { font-size: 32px; }
+
+  /* 1 card per row */
+  .bouquet-grid { grid-template-columns: 1fr; }
+
+  /* Make buttons + inputs comfortable (and stop iPhone zoom) */
+  input, textarea, button { font-size: 16px; }
+
+  /* Footer buttons stack nicely */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .footer-links a {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .map-wrap iframe { height: 260px; }
+}
+
+
 /* ===== MOBILE FOOTER FIX ===== */
 .footer-links {
   display: flex;
@@ -500,6 +660,4 @@ header {
   padding: 10px 14px;
   font-size: 13px;
 }
-
-
 
