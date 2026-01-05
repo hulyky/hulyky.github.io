@@ -27,9 +27,10 @@
     </ul>
     </nav>
 
-    <a href="#" class="cart-icon">
+        <a href="#" class="cart-icon">
     <img src="images/cart.png" alt="Cart">
-    </a>
+    <span id="cart-count">0</span>
+</a>
     </div>
     <img src="images/LogoFl.svg" alt="Florée Studio logo" class="logo-overlay">
     </header>
@@ -49,28 +50,32 @@
     <img src="images/IMG1.jpeg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Christmas Harmony</h3> 
                 <p class="price">£150</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG2.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Festive Charm</h3>
                 <p class="price">£150</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG3.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Winter Miracle</h3>
                 <p class="price">£100</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG4.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Winter Elegance</h3>
                 <p class="price">£100</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
 
@@ -82,28 +87,32 @@
                 <img src="images/IMG5.jpeg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Spring Pastels</h3>
                 <p class="price">£150</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                  <div class="card">
                 <img src="images/IMG6.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Rose Romance</h3>
                 <p class="price">£120</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG7.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Grace in Bloom</h3>
                 <p class="price">£100</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG8.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Floral Edit</h3>
                 <p class="price">£120</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
 
@@ -115,28 +124,32 @@
                 <img src="images/IMG9.jpeg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>White Elegance</h3>
                 <p class="price">£130</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG10.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>True Love</h3>
                 <p class="price">£110</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG11.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Orchid Luxe</h3>
                 <p class="price">£150</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 <div class="card">
                 <img src="images/IMG12.jpg" alt="Bouquet"> <!-- (Pinterest, 2025) -->
                 <h3>Ivory Kiss</h3>
                 <p class="price">£110</p>
-                <button class="btn">Add to cart</button>
+                <button class="btn add-to-cart">Add to cart</button>
+
                 </div>
 
                 </div>
@@ -157,6 +170,30 @@
             Email: hello@floreestudio.com
         </div>
     </footer>
+
+
+
+<script>
+    let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+    }
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", () => {
+            cartCount++;
+            localStorage.setItem("cartCount", cartCount);
+            if (cartCountElement) {
+                cartCountElement.textContent = cartCount;
+            }
+        });
+    });
+</script>
+
+
+
 
 </body>
 </html>

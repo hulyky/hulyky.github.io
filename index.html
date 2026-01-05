@@ -28,10 +28,14 @@
 
         
     <a href="#" class="cart-icon">
-            <img src="images/cart.png" alt="Cart"> <!-- (Icons8.com, 2020) -->
-        </a>
+    <img src="images/cart.png" alt="Cart">
+    <span id="cart-count">0</span>
+    </a>
+
+    <img src="images/cart.png" alt="Cart"> <!-- (Icons8.com, 2020) -->
+    </a>
     </div>
-</header>
+    </header>
 
 
     <!-- HERO -->
@@ -111,6 +115,29 @@
             Email: hello@floreestudio.com
         </div>
     </footer>
+
+
+<script>
+    let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+
+    const cartCountElement = document.getElementById("cart-count");
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+    }
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", () => {
+            cartCount++;
+            localStorage.setItem("cartCount", cartCount);
+            if (cartCountElement) {
+                cartCountElement.textContent = cartCount;
+            }
+        });
+    });
+</script>
+
+
+    
 
 </body>
 </html>
