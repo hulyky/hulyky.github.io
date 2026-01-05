@@ -8,31 +8,31 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
+    </head>
 
-<body>
+    <body>
 
     <!-- HEADER -->
     <header>
     <div class="logo">Florée Studio</div>
 
     <div class="header-right">
-        <nav>
-            <ul>
+    <nav>
+    <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    </ul>
+    </nav>
 
         
     <a href="#" class="cart-icon">
-    <img src="images/cart.png" alt="Cart">
+    <img src="images/cart.png" alt="Cart"> <!-- (Icons8.com, 2020) -->
     <span id="cart-count">0</span>
     </a>
 
- <!-- (Icons8.com, 2020) -->
+ 
     
     </div>
     </header>
@@ -40,44 +40,44 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-text">
+    <div class="hero-text">
             <h1>Fresh Flowers, Fresh Emotions</h1>
             <p>Handcrafted bouquets made with love in London.</p>
             <a class="btn" href="shop.html">Shop Now</a>
-        </div>
-        <img src="images/LogoFl.svg" class="hero-img">
+    </div>
+    <img src="images/LogoFl.svg" class="hero-img">
     </section>
 
     <!-- FEATURED BOUQUETS -->
     <section class="featured">
-        <h2>Featured Bouquets</h2>
+    <h2>Featured Bouquets</h2>
 
-        <div class="bouquet-grid">
+    <div class="bouquet-grid">
 
-            <div class="card">
+    <div class="card">
                 <img src="images/IMG1.jpeg" alt="Bouquet">
                 <h3>Christmas Arrangements</h3>
                 <a href="shop.html" class="arrow-link">→</a>
-            </div>
+    </div>
 
-            <div class="card">
+    <div class="card">
                 <img src="images/IMG9.jpeg" alt="Bouquet">
                 <h3>Wedding Bouquets</h3>
                 <a href="shop.html" class="arrow-link">→</a>
-            </div>
+    </div>
 
-            <div class="card">
+    <div class="card">
                 <img src="images/IMG5.jpeg" alt="Bouquet">
                 <h3>Luxury Statements</h3>
                 <a href="shop.html" class="arrow-link">→</a>
-            </div>
+    </div>
 
-        </div>
+    </div>
     </section>
 
     <!-- ABOUT US -->
     <section class="about">
-        <div class="about-content">
+    <div class="about-content">
             <h2>About Us</h2>
             <p>
                 Welcome to <strong>Florée Studio</strong>, a flower boutique based in the heart of London.  
@@ -88,37 +88,37 @@
                 Whether for a special occasion or simply to brighten your space, we’re here to help you share 
                 joy and creativity through flowers.
             </p>
-        </div>
+            </div>
 
-        <div class="newsletter">
-            <h3>Join Our Community</h3>
-            <p>Subscribe to our newsletter and never miss an update.</p>
+    <div class="newsletter">
+    <h3>Join Our Community</h3>
+    <p>Subscribe to our newsletter and never miss an update.</p>
 
-            <form class="newsletter-form">
+    <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
-            </form>
-        </div>
+    </form>
+    </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer-panel">
-        <div class="footer-links">
+    <div class="footer-links">
             <a href="#">Terms & Conditions</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Delivery Information</a>
             <a href="contact.html">Contact</a>
-        </div>
+    </div>
 
-        <div class="footer-info">
+    <div class="footer-info">
             © 2025 Florée Studio • London, UK<br>
             Email: hello@floreestudio.com
-        </div>
+    </div>
     </footer>
 
 
-<script>
-    let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+    <script> //JavaScript//
+    let cartCount = parseInt(localStorage.getItem("cartCount")) || 0; 
 
     const cartCountElement = document.getElementById("cart-count");
     if (cartCountElement) {
@@ -126,11 +126,11 @@
     }
 
     document.querySelectorAll(".add-to-cart").forEach(button => {
-        button.addEventListener("click", () => {
+    button.addEventListener("click", () => {
             cartCount++;
             localStorage.setItem("cartCount", cartCount);
             if (cartCountElement) {
-                cartCountElement.textContent = cartCount;
+            cartCountElement.textContent = cartCount;
             }
         });
     });
